@@ -1,0 +1,1052 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anveshak Hub - Bridging Innovation, Enterprise & Academia</title>
+    <meta name="description" content="Anveshak Hub Private Limited bridges innovation between industry and academia. Research as a Service, IP management, consulting, and upskilling for Indian enterprises.">
+    <!-- Open Graph / Social Sharing -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Anveshak Hub - Bridging Innovation, Enterprise & Academia">
+    <meta property="og:description" content="Premier organization fostering cutting-edge innovation and IP-led products and solutions across industries. Research as a Service for Indian enterprises.">
+    <meta property="og:image" content="img/og-image.jpg">
+    <meta property="og:url" content="https://anveshakhub.com">
+    <meta name="twitter:card" content="summary_large_image">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* ========== RESET & BASE ========== */
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            font-size: 16px;
+            line-height: 1.5;
+            color: #1A1A2E;
+            background: #FFFFFF;
+        }
+        img { max-width: 100%; display: block; }
+        a { color: inherit; text-decoration: none; }
+        ul { list-style: none; }
+
+        /* ========== SKIP LINK ========== */
+        .skip-link {
+            position: absolute;
+            top: -100%;
+            left: 16px;
+            background: #C8963E;
+            color: #fff;
+            padding: 8px 16px;
+            border-radius: 0 0 6px 6px;
+            z-index: 1000;
+            font-weight: 600;
+        }
+        .skip-link:focus { top: 0; }
+
+        /* ========== CONTAINER ========== */
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+
+        /* ========== NAVBAR ========== */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 100;
+            background: #1B2A4A;
+            padding: 16px 0;
+            transition: padding 0.3s ease, box-shadow 0.3s ease;
+        }
+        .navbar.scrolled {
+            padding: 8px 0;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        .navbar .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .nav-logo {
+            display: flex;
+            align-items: center;
+        }
+        .nav-logo img {
+            height: 36px;
+            width: auto;
+            background: #fff;
+            border-radius: 6px;
+            padding: 4px 8px;
+        }
+        .nav-links {
+            display: flex;
+            gap: 32px;
+            align-items: center;
+        }
+        .nav-links a {
+            color: rgba(255,255,255,0.85);
+            font-size: 14px;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+        .nav-links a:hover, .nav-links a:focus { color: #C8963E; }
+
+        /* Hamburger (CSS-only) */
+        .hamburger-toggle { display: none; }
+        .hamburger-label {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            padding: 8px;
+            min-width: 44px;
+            min-height: 44px;
+            justify-content: center;
+            align-items: center;
+        }
+        .hamburger-label span {
+            display: block;
+            width: 24px;
+            height: 2px;
+            background: #fff;
+            transition: transform 0.3s, opacity 0.3s;
+        }
+        .hamburger-toggle:checked ~ .hamburger-label span:nth-child(1) {
+            transform: translateY(7px) rotate(45deg);
+        }
+        .hamburger-toggle:checked ~ .hamburger-label span:nth-child(2) { opacity: 0; }
+        .hamburger-toggle:checked ~ .hamburger-label span:nth-child(3) {
+            transform: translateY(-7px) rotate(-45deg);
+        }
+
+        /* ========== HERO ========== */
+        .hero {
+            background: #1B2A4A;
+            padding: 140px 0 80px;
+            min-height: 600px;
+            display: flex;
+            align-items: center;
+        }
+        .hero .container {
+            display: grid;
+            grid-template-columns: 55% 45%;
+            gap: 48px;
+            align-items: center;
+        }
+        .hero-content h1 {
+            font-size: 48px;
+            font-weight: 700;
+            line-height: 1.15;
+            color: #FFFFFF;
+            margin-bottom: 20px;
+        }
+        .hero-content p {
+            font-size: 18px;
+            line-height: 1.6;
+            color: rgba(255,255,255,0.75);
+            margin-bottom: 28px;
+            max-width: 520px;
+        }
+        /* btn-primary defined globally below */
+
+        /* Contact Form Card */
+        .contact-card {
+            background: #fff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+        }
+        .contact-card-header {
+            background: #1B2A4A;
+            border-bottom: 3px solid #C8963E;
+            padding: 16px 24px;
+        }
+        .contact-card-header h3 {
+            color: #fff;
+            font-size: 18px;
+            font-weight: 600;
+        }
+        .contact-card-body { padding: 24px; background: #FAFBFC; }
+        .form-group { margin-bottom: 16px; }
+        .form-group label {
+            display: block;
+            font-size: 14px;
+            font-weight: 500;
+            color: #1A1A2E;
+            margin-bottom: 6px;
+        }
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 11px;
+            border: 2px solid #E5E7EB;
+            border-radius: 6px;
+            font-size: 16px;
+            font-family: inherit;
+            background: #fff;
+            transition: border-color 0.2s;
+            color: #1A1A2E;
+        }
+        .form-group input::placeholder,
+        .form-group textarea::placeholder { color: #9CA3AF; }
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #1B2A4A;
+        }
+        .form-group textarea { resize: vertical; min-height: 100px; }
+        .form-submit {
+            width: 100%;
+            background: #C8963E;
+            color: #fff;
+            padding: 14px;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.2s;
+            font-family: inherit;
+            min-height: 44px;
+        }
+        .form-submit:hover { background: #B4862F; }
+        .form-submit:focus { outline: 3px solid #C8963E; outline-offset: 2px; }
+        .form-submit:disabled { opacity: 0.7; cursor: not-allowed; }
+        .form-error { color: #DC2626; font-size: 14px; margin-top: 8px; display: none; }
+        .form-success {
+            display: none;
+            text-align: center;
+            padding: 40px 24px;
+        }
+        .form-success .checkmark {
+            width: 64px;
+            height: 64px;
+            border-radius: 50%;
+            background: #E8F5E9;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 16px;
+            font-size: 28px;
+        }
+        .form-success h4 {
+            font-size: 20px;
+            font-weight: 600;
+            color: #1B2A4A;
+            margin-bottom: 8px;
+        }
+        .form-success p { color: #6B7280; font-size: 14px; }
+        .mailto-alt {
+            display: block;
+            text-align: center;
+            margin-top: 12px;
+            font-size: 13px;
+            color: #6B7280;
+        }
+        .mailto-alt a {
+            color: #1B2A4A;
+            font-weight: 500;
+            text-decoration: underline;
+        }
+
+        /* ========== STATS BAR ========== */
+        .stats {
+            background: #F8F9FA;
+            padding: 48px 0;
+        }
+        .stats .container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 32px;
+            text-align: center;
+        }
+        .stat-item .stat-number {
+            font-size: 56px;
+            font-weight: 700;
+            color: #1B2A4A;
+            line-height: 1.2;
+            margin-bottom: 8px;
+        }
+        .stat-item .stat-label {
+            font-size: 16px;
+            font-weight: 600;
+            color: #1B2A4A;
+            margin-bottom: 4px;
+        }
+        .stat-item .stat-desc {
+            font-size: 14px;
+            color: #6B7280;
+            max-width: 280px;
+            margin: 0 auto;
+        }
+
+        /* ========== SERVICES ========== */
+        .services { padding: 80px 0; background: #fff; }
+        .section-heading {
+            font-size: 36px;
+            font-weight: 700;
+            color: #1B2A4A;
+            line-height: 1.2;
+            margin-bottom: 12px;
+        }
+        .section-subtitle {
+            font-size: 16px;
+            color: #6B7280;
+            margin-bottom: 48px;
+            max-width: 600px;
+        }
+        .services-featured {
+            display: grid;
+            grid-template-columns: 55% 1fr;
+            gap: 24px;
+            margin-bottom: 24px;
+        }
+        .services-standard {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+        }
+        .service-card {
+            background: #fff;
+            border: 1px solid #E5E7EB;
+            border-radius: 8px;
+            padding: 24px;
+            transition: box-shadow 0.3s ease;
+        }
+        .service-card:hover { box-shadow: 0 4px 12px rgba(0,0,0,0.08); }
+        .service-card .card-number {
+            font-size: 14px;
+            font-weight: 700;
+            color: #C8963E;
+            margin-bottom: 12px;
+        }
+        .service-card h3 {
+            font-size: 20px;
+            font-weight: 600;
+            color: #1B2A4A;
+            margin-bottom: 8px;
+            line-height: 1.3;
+        }
+        .service-card p {
+            font-size: 14px;
+            color: #6B7280;
+            line-height: 1.6;
+        }
+        .services-featured .service-card h3 { font-size: 22px; }
+        .services-featured .service-card p { font-size: 15px; }
+
+        /* ========== ABOUT ========== */
+        .about { padding: 80px 0; background: #F8F9FA; }
+        .about-cards {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+            margin-bottom: 48px;
+        }
+        .about-card {
+            background: #EBF0F7;
+            padding: 32px;
+            border-radius: 8px;
+        }
+        .about-card h3 {
+            font-size: 20px;
+            font-weight: 600;
+            color: #1B2A4A;
+            margin-bottom: 12px;
+        }
+        .about-card p {
+            font-size: 15px;
+            color: #1A1A2E;
+            line-height: 1.6;
+        }
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+        }
+        .value-item h4 {
+            font-size: 16px;
+            font-weight: 600;
+            color: #1B2A4A;
+            margin-bottom: 4px;
+        }
+        .value-item p { font-size: 14px; color: #6B7280; }
+
+        /* ========== TEAM ========== */
+        .team { padding: 80px 0; background: #fff; }
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 48px;
+            margin-top: 48px;
+        }
+        .team-card { text-align: center; }
+        .team-photo {
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+        .team-card:hover .team-photo { transform: scale(1.03); }
+        .team-photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .team-photo-placeholder {
+            width: 100%;
+            height: 100%;
+            background: #1B2A4A;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            font-size: 48px;
+            font-weight: 700;
+        }
+        .team-card h3 {
+            font-size: 20px;
+            font-weight: 600;
+            color: #1B2A4A;
+            margin-bottom: 4px;
+        }
+        .team-card .team-title {
+            font-size: 14px;
+            font-weight: 500;
+            color: #C8963E;
+            margin-bottom: 12px;
+        }
+        .team-card .team-bio {
+            font-size: 14px;
+            color: #6B7280;
+            line-height: 1.6;
+            max-width: 320px;
+            margin: 0 auto;
+        }
+
+        /* ========== PARTNERS ========== */
+        .partners { padding: 80px 0; background: #F8F9FA; text-align: center; }
+        .partner-card {
+            display: inline-flex;
+            align-items: center;
+            gap: 24px;
+            background: #fff;
+            border: 1px solid #E5E7EB;
+            border-radius: 12px;
+            padding: 32px 48px;
+            margin-top: 32px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+        }
+        .partner-card img {
+            width: 100px;
+            height: 100px;
+            object-fit: contain;
+        }
+        .partner-card-text { text-align: left; }
+        .partner-card-text h3 {
+            font-size: 22px;
+            font-weight: 700;
+            color: #1B2A4A;
+            margin-bottom: 4px;
+        }
+        .partner-card-text p {
+            font-size: 14px;
+            color: #6B7280;
+        }
+
+        /* ========== CTA ========== */
+        .cta { padding: 80px 0; background: #1B2A4A; }
+        .cta .container { text-align: center; }
+        .cta h2 {
+            font-size: 36px;
+            font-weight: 700;
+            color: #fff;
+            line-height: 1.2;
+            margin-bottom: 32px;
+        }
+        .cta-cards {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+            margin-bottom: 32px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .cta-card {
+            background: rgba(255,255,255,0.08);
+            border: 1px solid rgba(255,255,255,0.15);
+            border-radius: 8px;
+            padding: 24px;
+            text-align: left;
+        }
+        .cta-card h3 {
+            font-size: 18px;
+            font-weight: 600;
+            color: #C8963E;
+            margin-bottom: 8px;
+        }
+        .cta-card p {
+            font-size: 14px;
+            color: rgba(255,255,255,0.7);
+            line-height: 1.5;
+        }
+        .cta-subtitle {
+            font-size: 16px;
+            color: rgba(255,255,255,0.7);
+            margin-bottom: 24px;
+        }
+        .cta-buttons { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+        .btn-primary {
+            display: inline-block;
+            background: #C8963E;
+            color: #fff;
+            padding: 14px 36px;
+            border-radius: 6px;
+            font-weight: 600;
+            font-size: 16px;
+            transition: background 0.2s;
+            min-height: 44px;
+            border: none;
+            cursor: pointer;
+            text-decoration: none;
+        }
+        .btn-primary:hover { background: #B4862F; }
+        .btn-primary:focus { outline: 3px solid #C8963E; outline-offset: 2px; }
+        .btn-outline {
+            display: inline-block;
+            background: transparent;
+            color: #fff;
+            padding: 14px 36px;
+            border-radius: 6px;
+            font-weight: 600;
+            font-size: 16px;
+            border: 2px solid rgba(255,255,255,0.4);
+            transition: border-color 0.2s, color 0.2s;
+            min-height: 44px;
+        }
+        .btn-outline:hover { border-color: #fff; color: #fff; }
+        .btn-outline:focus { outline: 3px solid #C8963E; outline-offset: 2px; }
+
+        /* ========== FOOTER ========== */
+        .footer { background: #111827; padding: 64px 0 0; }
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 48px;
+            padding-bottom: 48px;
+        }
+        .footer-brand h3 {
+            font-size: 20px;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 8px;
+        }
+        .footer-brand p {
+            font-size: 14px;
+            color: rgba(255,255,255,0.5);
+            line-height: 1.6;
+        }
+        .footer h4 {
+            font-size: 14px;
+            font-weight: 600;
+            color: #fff;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 16px;
+        }
+        .footer-links a {
+            display: block;
+            font-size: 14px;
+            color: rgba(255,255,255,0.5);
+            padding: 4px 0;
+            transition: color 0.2s;
+        }
+        .footer-links a:hover { color: #C8963E; }
+        .footer-contact p {
+            font-size: 14px;
+            color: rgba(255,255,255,0.5);
+            line-height: 1.8;
+        }
+        .footer-contact a { color: #C8963E; }
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding: 20px 0;
+            text-align: center;
+        }
+        .footer-bottom p {
+            font-size: 13px;
+            color: rgba(255,255,255,0.35);
+        }
+
+        /* ========== ANIMATIONS ========== */
+        .animate-ready .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .animate-ready .animate-on-scroll.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        @media (prefers-reduced-motion: reduce) {
+            .animate-ready .animate-on-scroll {
+                opacity: 1;
+                transform: none;
+                transition: none;
+            }
+        }
+
+        /* ========== RESPONSIVE ========== */
+        @media (max-width: 1024px) {
+            .hero .container {
+                grid-template-columns: 1fr;
+                gap: 32px;
+            }
+            .hero { padding: 120px 0 60px; min-height: auto; }
+            .hero-content h1 { font-size: 36px; }
+            .services-featured { grid-template-columns: 1fr 1fr; }
+            .services-standard { grid-template-columns: repeat(2, 1fr); }
+        }
+        @media (max-width: 768px) {
+            .nav-links {
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: #1B2A4A;
+                padding: 0 24px;
+                gap: 0;
+                max-height: 0;
+                overflow: hidden;
+                visibility: hidden;
+                transition: max-height 0.3s ease, padding 0.3s ease, visibility 0.3s;
+            }
+            .hamburger-label { display: flex; }
+            .hamburger-toggle:checked ~ .nav-links {
+                max-height: 400px;
+                padding: 16px 24px;
+                gap: 16px;
+                visibility: visible;
+                box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            }
+            .hero { padding: 100px 0 48px; }
+            .hero-content h1 { font-size: 32px; }
+            .hero-content p { font-size: 16px; }
+            .section-heading { font-size: 28px; }
+            .stat-item .stat-number { font-size: 40px; }
+            .stats .container {
+                grid-template-columns: 1fr;
+                gap: 24px;
+            }
+            .services, .about, .team, .partners, .cta { padding: 48px 0; }
+            .services-featured { grid-template-columns: 1fr; }
+            .services-standard { grid-template-columns: 1fr; }
+            .about-cards { grid-template-columns: 1fr; }
+            .values-grid { grid-template-columns: 1fr 1fr; }
+            .team-grid {
+                grid-template-columns: 1fr;
+                gap: 32px;
+            }
+            .cta h2 { font-size: 28px; }
+            .cta-cards { grid-template-columns: 1fr; }
+            .footer-grid { grid-template-columns: 1fr; gap: 32px; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Skip Link -->
+    <a href="#main" class="skip-link">Skip to main content</a>
+
+    <!-- Navbar -->
+    <nav class="navbar" role="navigation" aria-label="Main navigation">
+        <div class="container">
+            <a href="#home" class="nav-logo"><img src="img/anveshak-logo.png" alt="Anveshak Hub"></a>
+            <input type="checkbox" id="nav-toggle" class="hamburger-toggle" aria-hidden="true" tabindex="-1">
+            <label for="nav-toggle" class="hamburger-label" aria-label="Open navigation menu" aria-expanded="false" role="button">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+            <div class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#services">Services</a>
+                <a href="#about">About Us</a>
+                <a href="#team">Our Team</a>
+                <a href="#partners">Partners</a>
+                <a href="#home">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <main id="main">
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="container">
+                <div class="hero-content animate-on-scroll">
+                    <h1>Bridging Innovation, Enterprise &amp; Academia</h1>
+                    <p>Premier organization fostering cutting-edge innovation and IP-led products and solutions across industries, Enterprises and organizations.</p>
+                    <a href="#services" class="btn-primary">Explore Our Services</a>
+                </div>
+                <div class="contact-card animate-on-scroll">
+                    <div class="contact-card-header">
+                        <h3>Contact Us</h3>
+                    </div>
+                    <div class="contact-card-body">
+                        <!-- Formspree form: https://formspree.io/f/xreoyeqe -->
+                        <form id="contact-form" action="https://formspree.io/f/xreoyeqe" method="POST">
+                            <div class="form-group">
+                                <label for="full-name">Full Name</label>
+                                <input type="text" id="full-name" name="name" placeholder="Your full name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email Address</label>
+                                <input type="email" id="email" name="email" placeholder="you@company.com" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Phone Number</label>
+                                <input type="tel" id="phone" name="phone" placeholder="+91 98765 43210">
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Message</label>
+                                <textarea id="message" name="message" rows="4" placeholder="Tell us about your requirements..." required></textarea>
+                            </div>
+                            <button type="submit" class="form-submit" id="submit-btn">Send Message</button>
+                            <p class="form-error" id="form-error" role="alert"></p>
+                        </form>
+                        <div class="form-success" id="form-success">
+                            <div class="checkmark" aria-hidden="true">&#10003;</div>
+                            <h4>Thank You!</h4>
+                            <p>We'll be in touch within 24 hours.</p>
+                        </div>
+                        <p class="mailto-alt">Or email us directly at <a href="mailto:info@anveshakhub.com">info@anveshakhub.com</a></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stats Bar -->
+        <section class="stats" aria-label="Innovation gap statistics">
+            <div class="container animate-on-scroll">
+                <div class="stat-item">
+                    <div class="stat-number" data-target="70" data-suffix="%">0%</div>
+                    <div class="stat-label">Industry Access Challenge</div>
+                    <p class="stat-desc">Indian companies struggle to access cutting-edge academic research for real-world problems</p>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" data-static="true">&lt;5%</div>
+                    <div class="stat-label">Industry-Academia Collaboration</div>
+                    <p class="stat-desc">Current partnership rate remains critically low compared to global standards</p>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" data-target="40" data-suffix="%">0%</div>
+                    <div class="stat-label">Potential Time Savings</div>
+                    <p class="stat-desc">R&amp;D acceleration possible through effective academic partnerships</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services -->
+        <section id="services" class="services">
+            <div class="container">
+                <h2 class="section-heading">Core Service Offerings</h2>
+                <p class="section-subtitle">Research as a Service, bridging the gap between academic excellence and industry needs.</p>
+                <div class="services-featured">
+                    <div class="service-card animate-on-scroll">
+                        <span class="card-number">01</span>
+                        <h3>Research-led Projects</h3>
+                        <p>Driving innovation through structured research methodologies, connecting PhD researchers and academic experts with industry challenges for breakthrough solutions.</p>
+                    </div>
+                    <div class="service-card animate-on-scroll">
+                        <span class="card-number">02</span>
+                        <h3>IP and Knowledge Management</h3>
+                        <p>Systematic management of intellectual property portfolios, patent strategies, and knowledge assets to maximize commercial value and protect innovations.</p>
+                    </div>
+                </div>
+                <div class="services-standard">
+                    <div class="service-card animate-on-scroll">
+                        <span class="card-number">03</span>
+                        <h3>Startup Ecosystem</h3>
+                        <p>Nurturing deep-tech startups through mentorship, infrastructure support, and industry connections to accelerate commercialization.</p>
+                    </div>
+                    <div class="service-card animate-on-scroll">
+                        <span class="card-number">04</span>
+                        <h3>Upskilling and Workshops</h3>
+                        <p>Industry-aligned training programs from shop floor to leadership, including Factory of the Future, AI, Automation, and IoT.</p>
+                    </div>
+                    <div class="service-card animate-on-scroll">
+                        <span class="card-number">05</span>
+                        <h3>Design and Development</h3>
+                        <p>End-to-end product design and development services leveraging academic research for hardware, software, and embedded systems.</p>
+                    </div>
+                    <div class="service-card animate-on-scroll">
+                        <span class="card-number">06</span>
+                        <h3>Consulting</h3>
+                        <p>Strategic advisory helping organizations bridge the innovation gap and build effective industry-academia collaboration frameworks.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About -->
+        <section id="about" class="about">
+            <div class="container">
+                <h2 class="section-heading animate-on-scroll">Our Vision &amp; Mission</h2>
+                <p class="section-subtitle animate-on-scroll">We believe in creating meaningful impact through innovation, collaboration, and excellence.</p>
+                <div class="about-cards animate-on-scroll">
+                    <div class="about-card">
+                        <h3>Our Vision</h3>
+                        <p>To be the leading catalyst for positive transformation in our industry, inspiring innovation and setting new standards of excellence that benefit our customers, partners, and communities worldwide.</p>
+                    </div>
+                    <div class="about-card">
+                        <h3>Our Mission</h3>
+                        <p>To deliver exceptional value through cutting-edge solutions, foster meaningful relationships built on trust and integrity, and empower our team to achieve their full potential while driving sustainable growth.</p>
+                    </div>
+                </div>
+                <div class="values-grid animate-on-scroll">
+                    <div class="value-item">
+                        <h4>Innovation</h4>
+                        <p>Pushing boundaries and embracing change</p>
+                    </div>
+                    <div class="value-item">
+                        <h4>Integrity</h4>
+                        <p>Operating with transparency and honesty</p>
+                    </div>
+                    <div class="value-item">
+                        <h4>Excellence</h4>
+                        <p>Delivering quality in everything we do</p>
+                    </div>
+                    <div class="value-item">
+                        <h4>Collaboration</h4>
+                        <p>Working together to achieve more</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Team -->
+        <section id="team" class="team">
+            <div class="container">
+                <h2 class="section-heading">Our Team</h2>
+                <p class="section-subtitle">Meet the visionary leaders driving Anveshak Hub's mission to bridge innovation, enterprise, and academia.</p>
+                <div class="team-grid">
+                    <div class="team-card animate-on-scroll">
+                        <div class="team-photo">
+                            <img src="img/team-tejaswini.jpg" alt="Tejaswini, Technical and Engineering Leadership at Anveshak Hub" loading="lazy" data-fallback="T">
+                        </div>
+                        <h3>Tejaswini</h3>
+                        <p class="team-title">Technical &amp; Engineering Leadership</p>
+                        <p class="team-bio">Deep technical, delivery, and leadership experience from global organizations such as NXP Semiconductors, Harman, and Wipro. Shaping a research-led, engineering-driven innovation partner.</p>
+                    </div>
+                    <div class="team-card animate-on-scroll">
+                        <div class="team-photo">
+                            <img src="img/team-rathika.jpg" alt="Rathika Rani Ponnusamy, Industry Interface and Business Transformation at Anveshak Hub" loading="lazy" data-fallback="R">
+                        </div>
+                        <h3>Rathika Rani Ponnusamy</h3>
+                        <p class="team-title">Industry Interface &amp; Business Transformation</p>
+                        <p class="team-bio">Anchors Anveshak Hub's industry interface, structuring transformation initiatives that convert operational challenges into execution-ready, commercially grounded outcomes.</p>
+                    </div>
+                    <div class="team-card animate-on-scroll">
+                        <div class="team-photo">
+                            <img src="img/team-prakruthi.jpg" alt="Dr. Prakruthi Hareesh, Applied Research and Knowledge Systems at Anveshak Hub" loading="lazy" data-fallback="P">
+                        </div>
+                        <h3>Dr. Prakruthi Hareesh</h3>
+                        <p class="team-title">Applied Research &amp; Knowledge Systems</p>
+                        <p class="team-bio">Leads applied research frameworks and knowledge systems that translate insights into high-value outcomes aligned with strategic priorities and long-term competitiveness.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Partners -->
+        <section id="partners" class="partners">
+            <div class="container animate-on-scroll">
+                <h2 class="section-heading" style="text-align:center;">Our Academic Partners</h2>
+                <p class="section-subtitle" style="text-align:center; margin-left:auto; margin-right:auto;">Collaborating with India's premier institutions to drive innovation.</p>
+                <div class="partner-card">
+                    <img src="img/bits-pilani-logo.png" alt="BITS Pilani - Birla Institute of Technology and Science" loading="lazy">
+                    <div class="partner-card-text">
+                        <h3>BITS Pilani</h3>
+                        <p>Lead Institute for WILP Smart Manufacturing</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="cta">
+            <div class="container animate-on-scroll">
+                <h2>Join Us in Shaping India's Innovation Future</h2>
+                <div class="cta-cards">
+                    <div class="cta-card">
+                        <h3>For Industry Partners</h3>
+                        <p>Unlock the power of academic research for your business growth, access cutting-edge solutions, and accelerate your competitive advantage.</p>
+                    </div>
+                    <div class="cta-card">
+                        <h3>For Academic Researchers</h3>
+                        <p>Empower your talent to solve real-world problems, secure industry funding, and drive meaningful economic impact across sectors.</p>
+                    </div>
+                </div>
+                <p class="cta-subtitle">Ready to transform how research drives business innovation in India?</p>
+                <div class="cta-buttons">
+                    <a href="#home" class="btn-primary" id="cta-get-started">Get Started</a>
+                    <a href="mailto:info@anveshakhub.com" class="btn-outline">Email Us</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h3>Anveshak Hub</h3>
+                    <p>Bridging Innovation, Enterprise &amp; Academia. Premier organization fostering cutting-edge innovation and IP-led products and solutions across industries.</p>
+                </div>
+                <div>
+                    <h4>Quick Links</h4>
+                    <div class="footer-links">
+                        <a href="#home">Home</a>
+                        <a href="#services">Services</a>
+                        <a href="#about">About Us</a>
+                        <a href="#team">Our Team</a>
+                        <a href="#partners">Partners</a>
+                        <a href="#home">Contact</a>
+                    </div>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contact Info</h4>
+                    <p>Email: <a href="mailto:info@anveshakhub.com">info@anveshakhub.com</a></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Anveshak Hub Private Limited. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // ========== TEAM PHOTO FALLBACK ==========
+        document.querySelectorAll('.team-photo img[data-fallback]').forEach(img => {
+            img.addEventListener('error', () => {
+                const initial = img.dataset.fallback;
+                const placeholder = document.createElement('div');
+                placeholder.className = 'team-photo-placeholder';
+                placeholder.textContent = initial;
+                img.parentElement.replaceChild(placeholder, img);
+            });
+        });
+
+        // ========== NAVBAR SCROLL BEHAVIOR ==========
+        const navbar = document.querySelector('.navbar');
+        window.addEventListener('scroll', () => {
+            navbar.classList.toggle('scrolled', window.scrollY > 500);
+        }, { passive: true });
+
+        // ========== ANIMATE ON SCROLL ==========
+        document.body.classList.add('animate-ready');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.15 });
+
+        document.querySelectorAll('.animate-on-scroll').forEach(el => observer.observe(el));
+
+        // ========== STATS COUNT-UP ==========
+        let statsCounted = false;
+        const statsObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting && !statsCounted) {
+                    statsCounted = true;
+                    document.querySelectorAll('.stat-number[data-target]').forEach(el => {
+                        const target = parseInt(el.dataset.target);
+                        const suffix = el.dataset.suffix || '';
+                        const duration = 1200;
+                        const start = performance.now();
+                        function update(now) {
+                            const elapsed = now - start;
+                            const progress = Math.min(elapsed / duration, 1);
+                            const eased = 1 - Math.pow(1 - progress, 3);
+                            el.textContent = Math.round(target * eased) + suffix;
+                            if (progress < 1) requestAnimationFrame(update);
+                        }
+                        requestAnimationFrame(update);
+                    });
+                    statsObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.15 });
+
+        const statsSection = document.querySelector('.stats');
+        if (statsSection) statsObserver.observe(statsSection);
+
+        // ========== FORM AJAX SUBMISSION ==========
+        const form = document.getElementById('contact-form');
+        const submitBtn = document.getElementById('submit-btn');
+        const formError = document.getElementById('form-error');
+        const formSuccess = document.getElementById('form-success');
+
+        if (form) {
+            form.addEventListener('submit', async (e) => {
+                e.preventDefault();
+                submitBtn.disabled = true;
+                submitBtn.textContent = 'Sending...';
+                formError.style.display = 'none';
+
+                try {
+                    const response = await fetch(form.action, {
+                        method: 'POST',
+                        body: new FormData(form),
+                        headers: { 'Accept': 'application/json' }
+                    });
+                    if (response.ok) {
+                        form.style.display = 'none';
+                        formSuccess.style.display = 'block';
+                    } else {
+                        throw new Error('Submission failed');
+                    }
+                } catch (err) {
+                    formError.textContent = 'Something went wrong. Please email us directly at info@anveshakhub.com';
+                    formError.style.display = 'block';
+                    submitBtn.disabled = false;
+                    submitBtn.textContent = 'Send Message';
+                }
+            });
+        }
+
+        // ========== CTA SCROLL + FOCUS ==========
+        const ctaBtn = document.getElementById('cta-get-started');
+        if (ctaBtn) {
+            ctaBtn.addEventListener('click', (e) => {
+                e.preventDefault();
+                const nameField = document.getElementById('full-name');
+                if (nameField) {
+                    document.getElementById('home').scrollIntoView({ behavior: 'smooth' });
+                    setTimeout(() => nameField.focus(), 800);
+                }
+            });
+        }
+
+        // ========== HAMBURGER A11Y ==========
+        const navToggle = document.getElementById('nav-toggle');
+        const hamburgerLabel = document.querySelector('.hamburger-label');
+        if (navToggle && hamburgerLabel) {
+            navToggle.addEventListener('change', () => {
+                hamburgerLabel.setAttribute('aria-label',
+                    navToggle.checked ? 'Close navigation menu' : 'Open navigation menu'
+                );
+                hamburgerLabel.setAttribute('aria-expanded', navToggle.checked);
+            });
+        }
+    </script>
+</body>
+</html>
