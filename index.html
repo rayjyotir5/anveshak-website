@@ -127,12 +127,27 @@
             min-height: 600px;
             display: flex;
             align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('img/hero-bg.jpg') center/cover no-repeat;
+            opacity: 0.08;
+            pointer-events: none;
         }
         .hero .container {
             display: grid;
             grid-template-columns: 55% 45%;
             gap: 48px;
             align-items: center;
+            position: relative;
+            z-index: 1;
         }
         .hero-content h1 {
             font-size: 48px;
