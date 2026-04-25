@@ -1,7 +1,7 @@
 // Custom cursor with magnetic hover effect
-const { useEffect } = React;
+import { useEffect } from 'react';
 
-function CursorTracker() {
+export default function CursorTracker() {
   useEffect(() => {
     const dot = document.getElementById('cursor-dot');
     const ring = document.getElementById('cursor-ring');
@@ -60,5 +60,3 @@ function CursorTracker() {
   }, []);
   return null;
 }
-
-window.CursorTracker = CursorTracker;

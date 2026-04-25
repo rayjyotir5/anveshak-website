@@ -1,8 +1,8 @@
 // 3D Bridge / Network metaphor — Industry ↔ Academia
 // Two clusters of nodes connected by luminous threads, projected from 3D
-const { useEffect, useRef } = React;
+import { useEffect, useRef } from 'react';
 
-function HeroBridge({ intensity = 1, mode = 'bridge' }) {
+export default function HeroBridge({ intensity = 1, mode = 'bridge' }) {
   const canvasRef = useRef(null);
   const mouseRef = useRef({ x: 0, y: 0, tx: 0, ty: 0 });
   const scrollRef = useRef(0);
@@ -310,5 +310,3 @@ function HeroBridge({ intensity = 1, mode = 'bridge' }) {
     />
   );
 }
-
-window.HeroBridge = HeroBridge;

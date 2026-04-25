@@ -1,7 +1,7 @@
 // CTA + Contact form
-const { useState } = React;
+import { useState } from 'react';
 
-function CTA() {
+export default function CTA() {
   const [status, setStatus] = useState('idle');
   const [error, setError] = useState('');
 
@@ -203,4 +203,3 @@ function Field({ name, label, placeholder, type = 'text', required, textarea }) 
   );
 }
 
-window.CTA = CTA;

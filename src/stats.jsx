@@ -1,7 +1,7 @@
 // Stats — kinetic numerals on a constellation backdrop
-const { useEffect, useRef, useState } = React;
+import { useEffect, useRef, useState } from 'react';
 
-function Stats() {
+export default function Stats() {
   return (
     <section style={{
       position: 'relative',
@@ -178,5 +178,3 @@ function ConstellationBg() {
   }, []);
   return <canvas ref={ref} style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', opacity: 0.5 }} />;
 }
-
-window.Stats = Stats;

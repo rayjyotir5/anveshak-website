@@ -1,6 +1,6 @@
 // Services — horizontal scroll-jacked storytelling
 // While the user scrolls vertically, the section pins and panels translate horizontally
-const { useEffect, useRef, useState } = React;
+import { useEffect, useRef, useState } from 'react';
 
 const SERVICES = [
   {
@@ -47,7 +47,7 @@ const SERVICES = [
   },
 ];
 
-function Services() {
+export default function Services() {
   const wrapRef = useRef(null);
   const trackRef = useRef(null);
   const [progress, setProgress] = useState(0);
@@ -364,4 +364,3 @@ function MobileServiceCard({ svc, i }) {
   );
 }
 
-window.Services = Services;

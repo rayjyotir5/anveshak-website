@@ -1,6 +1,6 @@
 // Impact — parallax research-impact section
 // Multiple layers move at different speeds with scroll
-const { useEffect, useRef, useState } = React;
+import { useEffect, useRef, useState } from 'react';
 
 const PILLARS = [
   { kw: 'Discovery', body: 'Mapping the right researchers and labs to a real industry problem.' },
@@ -9,7 +9,7 @@ const PILLARS = [
   { kw: 'Deployment', body: 'Embedding outcomes in operations with the partner team.' },
 ];
 
-function Impact() {
+export default function Impact() {
   const ref = useRef(null);
   const [p, setP] = useState(0);
 
@@ -197,6 +197,3 @@ function PillarCard({ pillar, i }) {
   );
 }
 
-function MetricCell() { return null; }
-
-window.Impact = Impact;

@@ -1,5 +1,5 @@
 // Footer
-function Footer() {
+export default function Footer() {
   return (
     <footer style={{
       background: 'var(--bg-2)',
@@ -101,4 +101,3 @@ function FooterCol({ heading, links }) {
 
 }
 
-window.Footer = Footer;

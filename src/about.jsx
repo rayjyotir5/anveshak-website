@@ -1,5 +1,5 @@
 // About — values only
-function About() {
+export default function About() {
   return (
     <section id="about" style={{
       position: 'relative',
@@ -72,4 +72,3 @@ function About() {
   );
 }
 
-window.About = About;

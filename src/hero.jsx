@@ -1,7 +1,8 @@
 // Hero — full-bleed 3D bridge canvas + kinetic typography
-const { useEffect, useRef, useState } = React;
+import { useEffect, useRef } from 'react';
+import HeroBridge from './hero-bridge.jsx';
 
-function Hero({ intensity }) {
+export default function Hero({ intensity }) {
   const headlineRef = useRef(null);
 
   useEffect(() => {
@@ -27,7 +28,7 @@ function Hero({ intensity }) {
       paddingTop: 120,
       paddingBottom: 140,
     }}>
-      <window.HeroBridge intensity={intensity} />
+      <HeroBridge intensity={intensity} />
 
       {/* Top vignette */}
       <div style={{
@@ -189,5 +190,3 @@ function Hero({ intensity }) {
     </section>
   );
 }
-
-window.Hero = Hero;

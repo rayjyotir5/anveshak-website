@@ -1,5 +1,5 @@
 // Team — compact portraits with text alongside; portraits capped to image native size
-const { useState } = React;
+import { useState } from 'react';
 
 const TEAM = [
   {
@@ -25,7 +25,7 @@ const TEAM = [
   },
 ];
 
-function Team() {
+export default function Team() {
   return (
     <section id="team" style={{
       padding: '160px 0',
@@ -163,4 +163,3 @@ function TeamRow({ t, i }) {
   );
 }
 
-window.Team = Team;

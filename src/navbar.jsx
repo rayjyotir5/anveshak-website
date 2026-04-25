@@ -1,7 +1,7 @@
 // Navbar — fixed, transparent → solid on scroll, with mobile drawer
-const { useState, useEffect } = React;
+import { useState, useEffect } from 'react';
 
-function Navbar() {
+export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
 
@@ -179,5 +179,3 @@ function Navbar() {
     </>);
 
 }
-
-window.Navbar = Navbar;

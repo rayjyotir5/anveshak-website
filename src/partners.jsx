@@ -1,5 +1,5 @@
 // Partners — minimalist showcase
-function Partners() {
+export default function Partners() {
   return (
     <section id="partners" style={{
       padding: '120px 0',
@@ -97,4 +97,3 @@ function Partners() {
   );
 }
 
-window.Partners = Partners;
