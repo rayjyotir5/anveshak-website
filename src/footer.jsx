@@ -9,16 +9,17 @@ export default function Footer() {
       <div className="container">
         <div className="footer-marquee" style={{
           fontFamily: 'var(--serif)',
-          fontSize: 'clamp(28px, 8vw, 120px)',
+          fontSize: '4.2cqi',
           letterSpacing: '-0.02em',
           lineHeight: 1.15,
           color: 'var(--ink)',
           marginBottom: 64,
           overflow: 'hidden',
           whiteSpace: 'nowrap',
-          paddingBlock: '0.1em'
+          paddingBlock: '0.1em',
+          containerType: 'inline-size',
         }}>
-          <span>Bridging <em style={{ color: 'var(--gold)', fontStyle: 'italic' }}>innovation</em> · enterprise · academia &nbsp;</span>
+          <span>Bridging <em style={{ color: 'var(--gold)', fontStyle: 'italic' }}>innovation</em> · enterprise · academia</span>
         </div>
 
         <div className="footer-grid" style={{
@@ -73,9 +74,6 @@ export default function Footer() {
       <style>{`
         @media (max-width: 900px) {
           .footer-grid { grid-template-columns: 1fr 1fr !important; }
-        }
-        @media (max-width: 720px) {
-          .footer-marquee { white-space: normal !important; }
         }
         @media (max-width: 540px) {
           .footer-grid { grid-template-columns: 1fr !important; }
