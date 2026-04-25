@@ -60,7 +60,7 @@ export default function Navbar() {
                 fontSize: 9,
                 letterSpacing: '0.25em',
                 color: 'var(--gold)',
-                marginTop: 2
+                marginTop: 6
               }}>IGNITE / INNOVATE / INSPIRE</span>
             </div>
           </a>
