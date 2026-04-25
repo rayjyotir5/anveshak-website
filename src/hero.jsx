@@ -56,6 +56,7 @@ export default function Hero({ intensity }) {
             className="display"
             style={{
               fontSize: 'clamp(48px, 9vw, 132px)',
+              lineHeight: 1.1,
               marginTop: 28,
               marginBottom: 36,
               color: 'var(--ink)',
