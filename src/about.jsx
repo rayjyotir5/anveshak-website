@@ -36,7 +36,7 @@ export default function About() {
             { n: '04', title: 'Collaboration', desc: 'Working together to achieve more.' },
           ].map(v => (
             <div key={v.n} className="value-cell" style={{
-              padding: '40px 24px 40px 0',
+              padding: '40px 28px',
               borderRight: '1px solid var(--line-strong)',
               borderBottom: '1px solid var(--line-strong)',
             }}>
@@ -65,7 +65,7 @@ export default function About() {
         }
         @media (max-width: 540px) {
           .values-grid { grid-template-columns: 1fr !important; }
-          .value-cell { border-right: none !important; padding-right: 0 !important; }
+          .value-cell { border-right: none !important; }
         }
       `}</style>
     </section>
