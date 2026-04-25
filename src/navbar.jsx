@@ -61,7 +61,7 @@ export default function Navbar() {
                 letterSpacing: '0.25em',
                 color: 'var(--gold)',
                 marginTop: 2
-              }}>EST 2026</span>
+              }}>IGNITE / INNOVATE / INSPIRE</span>
             </div>
           </a>
 

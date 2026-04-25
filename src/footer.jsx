@@ -65,7 +65,7 @@ export default function Footer() {
           <div style={{ fontFamily: 'var(--mono)', fontSize: 11, color: 'var(--ink-dim)', letterSpacing: '0.15em' }}>
             © 2026 ANVESHAK HUB PRIVATE LIMITED · ALL RIGHTS RESERVED
           </div>
-          <div style={{ fontFamily: 'var(--mono)', fontSize: 11, color: 'var(--ink-dim)', letterSpacing: '0.15em' }}>INDIA · EST 2026
+          <div style={{ fontFamily: 'var(--mono)', fontSize: 11, color: 'var(--ink-dim)', letterSpacing: '0.15em' }}>INDIA · IGNITE / INNOVATE / INSPIRE
 
           </div>
         </div>
