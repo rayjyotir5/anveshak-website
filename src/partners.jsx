@@ -82,7 +82,7 @@ export default function Partners() {
             gap: 16,
           }}>
             {[
-              { l: 'Programs', v: 'WILP · M.Tech' },
+              { l: 'Programs', v: 'WILP · M.Tech · PhD' },
               { l: 'Focus', v: 'Smart Manufacturing' },
             ].map(x => (
               <div key={x.l}>
