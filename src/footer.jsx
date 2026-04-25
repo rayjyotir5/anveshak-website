@@ -9,7 +9,7 @@ export default function Footer() {
       <div className="container">
         <div className="footer-marquee" style={{
           fontFamily: 'var(--serif)',
-          fontSize: 'clamp(40px, 8vw, 120px)',
+          fontSize: 'clamp(28px, 8vw, 120px)',
           letterSpacing: '-0.02em',
           lineHeight: 1.15,
           color: 'var(--ink)',
@@ -73,6 +73,9 @@ export default function Footer() {
       <style>{`
         @media (max-width: 900px) {
           .footer-grid { grid-template-columns: 1fr 1fr !important; }
+        }
+        @media (max-width: 720px) {
+          .footer-marquee { white-space: normal !important; }
         }
         @media (max-width: 540px) {
           .footer-grid { grid-template-columns: 1fr !important; }
