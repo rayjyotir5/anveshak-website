@@ -18,7 +18,7 @@ export default function Footer() {
           whiteSpace: 'nowrap',
           paddingBlock: '0.1em'
         }}>
-          <span style={{ fontSize: "3px" }}>Bridging <em style={{ color: 'var(--gold)', fontStyle: 'italic' }}>innovation</em> · enterprise · academia &nbsp;</span>
+          <span>Bridging <em style={{ color: 'var(--gold)', fontStyle: 'italic' }}>innovation</em> · enterprise · academia &nbsp;</span>
         </div>
 
         <div className="footer-grid" style={{
